@@ -4,11 +4,7 @@ middleman-sass-foundation
 
 A Middleman template with Foundation and Sass Way folder structure
 
-# To Use #
-
-# Middleman Template: ZURB Foundation #
-
-middleman-zurb-foundation is a minimal [Middleman](http://middlemanapp.com/) project template with the [SASS](http://sass-lang.com/) version of the [ZURB Foundation](http://foundation.zurb.com/) Framework.
+Thanks to [axyz](https://github/axyz) who's [Middleman ZURB Foundation template](https://github.com/axyz/middleman-zurb-foundation) provided the main structure and [ZURB Foundation](http://foundation.zurb.com/) integration method detailed below.
 
 ## Installation ##
 
@@ -22,18 +18,17 @@ Make sure to have:
 
 Clone into ~/.middleman (you'll have to create this directory if it's not already there). You can then use it with the `--template` flag on `middleman init`.
 
-1. $ `git clone git://github.com/axyz/middleman-zurb-foundation.git ~/.middleman/zurb-foundation`
+1. $ `git clone https://github.com/timsvoice/middleman-sass-foundation.git ~/.middleman/sass-foundation`
 
 Then create a new project using zurb-foundation template.
 
-1. $ `middleman init my_new_project --template=zurb-foundation`
+1. $ `middleman init my_new_project --template=sass-foundation`
 1. $ `cd my_new_project`
 1. $ `bower install`
 1. $ `bundle exec middleman`
 
 Now you can start hacking on `source` directory and watch live changes on [localhost:4567](http://localhost:4567).
 
-For more help follow [Middleman's project template instructions](http://middlemanapp.com/getting-started/welcome/) or feel free to hit me up on [Twitter](http://twitter.com/axyz).
 
 ## ZURB Foundation License ##
 
