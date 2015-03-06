@@ -1,0 +1,185 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>The Middleman</title>
+    
+    <link href="/stylesheets/app.css" rel="stylesheet" type="text/css" /><link href="/stylesheets/style.css" rel="stylesheet" type="text/css" />
+    <script src="/javascripts/modernizr.js" type="text/javascript"></script>
+  </head>
+  
+  <body class="bower_components bower_components_bourbon bower_components_bourbon_README">
+    
+    <p><a href="http://bourbon.io"><img alt="Bourbon" src="http://images.thoughtbot.com/bourbon/bourbon-logo.svg" /></a></p>
+
+<p><a href="https://rubygems.org/gems/bourbon"><img alt="Gem Version" src="http://img.shields.io/gem/v/bourbon.svg?style=flat" /></a>
+<a href="https://codeclimate.com/github/thoughtbot/bourbon"><img alt="Code Climate" src="http://img.shields.io/codeclimate/github/thoughtbot/bourbon.svg?style=flat" /></a>
+<a href="https://gitter.im/thoughtbot/bourbon"><img alt="Gitter chat" src="https://img.shields.io/badge/gitter-thoughtbot/bourbon-ae3dd2.svg?style=flat" /></a>
+<a href="http://stackoverflow.com/questions/tagged/bourbon"><img alt="Stack Overflow" src="http://img.shields.io/badge/stack%20overflow-bourbon-ae3dd2.svg?style=flat" /></a></p>
+
+<h2 id="a-simple-and-lightweight-mixin-library-for-sass">A simple and lightweight mixin library for Sass.</h2>
+
+<p>Bourbon is a library of pure Sass mixins that are designed to be simple and easy to use. No configuration required. The mixins aim to be as vanilla as possible, meaning they should be as close to the original CSS syntax as possible.</p>
+
+<p>The mixins contain vendor specific prefixes for all CSS3 properties for support amongst modern browsers. The prefixes also ensure graceful degradation for older browsers that support only CSS3 prefixed properties. Bourbon uses SCSS syntax.</p>
+
+<ul>
+  <li><strong><a href="http://bourbon.io/docs">Documentation</a></strong></li>
+  <li><strong><a href="https://github.com/thoughtbot/bourbon/releases">Changelog</a></strong></li>
+  <li><strong><a href="https://github.com/thoughtbot/bourbon/issues">Issues &amp; Bugs</a></strong></li>
+</ul>
+
+<h2 id="requirements">Requirements</h2>
+
+<ul>
+  <li><a href="https://github.com/sass/sass">Sass</a> 3.4+ or <a href="https://github.com/sass/libsass">LibSass</a> 3.1+</li>
+</ul>
+
+<h2 id="installation">Installation</h2>
+
+<p>For command line help, visit our wiki page on Bourbon’s <a href="https://github.com/thoughtbot/bourbon/wiki/Command-Line-Interface">command line interface</a>.</p>
+
+<ol>
+  <li>Install the Bourbon gem using the <a href="https://rubygems.org">RubyGems</a> package manager:</li>
+</ol>
+
+<p><code>bash
+  gem install bourbon
+ </code></p>
+
+<p>Alternatively, you can install Bourbon with <a href="http://bower.io">Bower</a>.</p>
+
+<ol>
+  <li>Install the Bourbon library into the current directory:</li>
+</ol>
+
+<p><code>bash
+  bourbon install
+ </code></p>
+
+<p><strong>Pro Tip:</strong> You can target installation into a specific directory using the <code>path</code> flag:</p>
+
+<p><code>bash
+  bourbon install --path my/custom/path/
+ </code></p>
+
+<ol>
+  <li>Import Bourbon at the beginning of your stylesheet:</li>
+</ol>
+
+<p><code>scss
+  @import "bourbon/bourbon";
+ </code></p>
+
+<p>It’s not recommended to add or modify the Bourbon files so that you can update them easily.</p>
+
+<h2 id="installation-for-ruby-on-rails-31">Installation for Ruby on Rails 3.1+</h2>
+
+<ol>
+  <li>Add Bourbon to your Gemfile:</li>
+</ol>
+
+<p><code>ruby
+  gem 'bourbon'
+ </code></p>
+
+<ol>
+  <li>Then run:</li>
+</ol>
+
+<p><code>bash
+  bundle install
+ </code></p>
+
+<ol>
+  <li>Restart your server and rename <code>application.css</code> to <code>application.scss</code>:</li>
+</ol>
+
+<p><code>bash
+  mv app/assets/stylesheets/application.css app/assets/stylesheets/application.scss
+ </code></p>
+
+<ol>
+  <li>
+    <p>Delete <em>all</em> Sprockets directives in <code>application.scss</code> (<code>require</code>, <code>require_tree</code> and <code>require_self</code>) and use Sass’s native <code>@import</code> instead.</p>
+  </li>
+  <li>
+    <p>Import Bourbon at the beginning of <code>application.scss</code>. All additional stylesheets should be imported below Bourbon:</p>
+  </li>
+</ol>
+
+<p><code>scss
+  @import "bourbon";
+  @import "home";
+  @import "users";
+ </code></p>
+
+<p><a href="https://github.com/thoughtbot/bourbon/wiki/Rails-Help-%5C-Undefined-mixin">Help! I’m getting an undefined mixin error.</a></p>
+
+<h2 id="installing-older-versions-of-bourbon">Installing older versions of Bourbon</h2>
+
+<ol>
+  <li>Uninstall any Bourbon gem versions you already have:</li>
+</ol>
+
+<p><code>bash
+  gem uninstall bourbon
+ </code></p>
+
+<ol>
+  <li>Reinstall the Bourbon gem, using the <code>-v</code> flag to specify the version you need:</li>
+</ol>
+
+<p><code>bash
+  gem install bourbon -v 3.2.4
+ </code></p>
+
+<ol>
+  <li>Follow the <a href="#installation">instructions above</a> to install Bourbon into your project.</li>
+</ol>
+
+<h2 id="browser-support">Browser support</h2>
+
+<ul>
+  <li>Chrome 26+</li>
+  <li>Firefox 29+</li>
+  <li>Internet Explorer 9+</li>
+  <li>Opera 15+</li>
+  <li>Safari 6.1+</li>
+</ul>
+
+<h2 id="the-bourbon-family">The Bourbon family</h2>
+
+<ul>
+  <li><a href="https://github.com/thoughtbot/bourbon">Bourbon</a>: A simple and lightweight mixin library for Sass</li>
+  <li><a href="https://github.com/thoughtbot/neat">Neat</a>: A lightweight semantic grid framework for Sass and Bourbon</li>
+  <li><a href="https://github.com/thoughtbot/bitters">Bitters</a>: Scaffold styles, variables and structure for Bourbon projects</li>
+  <li><a href="https://github.com/thoughtbot/refills">Refills</a>: Prepackaged patterns and components built with Bourbon, Neat and Bitters</li>
+</ul>
+
+<p>Also check out <a href="https://github.com/thoughtbot/proteus">Proteus</a>, a collection of useful starter kits to help you prototype faster. Each kit comes with Bourbon, Neat and Bitters out-of-the-box.</p>
+
+<h2 id="credits">Credits</h2>
+
+<p><a href="http://thoughtbot.com"><img alt="thoughtbot" src="http://images.thoughtbot.com/bourbon/thoughtbot-logo.svg" /></a></p>
+
+<p>Bourbon is maintained and funded by <a href="http://thoughtbot.com">thoughtbot, inc</a>. Tweet your questions or suggestions to <a href="https://twitter.com/bourbonsass">@bourbonsass</a> and while you’re at it follow us too.</p>
+
+<h2 id="license">License</h2>
+
+<p>Copyright © 2011–2015 <a href="http://thoughtbot.com">thoughtbot, inc</a>. Bourbon is free software, and may be redistributed under the terms specified in the <a href="LICENSE.md">license</a>.</p>
+
+
+    <script src="/javascripts/all.js" type="text/javascript"></script>
+    <script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-40277117-1', 'auto');
+  ga('send', 'pageview');
+</script>
+  </body>
+</html>

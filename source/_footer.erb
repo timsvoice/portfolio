@@ -1,0 +1,13 @@
+<div class="divider"></div>
+
+<div class="footer-container">
+  <footer>
+    <div class="social">
+      <ul class="social-list">
+        <% data.personal.social.each do |links| %>
+          <li class="social-list-item"><a href="<%= links.url %>"><%= links.site %></a></li>
+        <% end %>
+      </ul>
+    </div>
+  </footer>
+</div>

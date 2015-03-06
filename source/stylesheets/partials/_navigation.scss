@@ -1,0 +1,59 @@
+#menu {
+  position: absolute;
+  top: 0;
+  @extend .fixed;
+  // border-bottom: 0.25rem darken($color-brand, 2%) solid;
+  // box-shadow: 0px 0.125rem 0.25rem 0px darken($color-brand, 2%);
+}
+
+.content {
+  &-nav {
+    @extend .small-12, .medium-8, .medium-offset-2, .columns;
+    position: relative; 
+    background-color: $color-background;   
+    margin-bottom: 2rem;
+  }
+  &-previous, &-next {
+    @extend .small-6, .columns;
+    @include breakpoint(small) {
+      height: 2rem;
+    }    
+    height: 6rem;
+    border-top: 0.125rem darken($color-background, 2%) solid;
+    text-align: center;  
+    &:hover {
+      background-color: darken($color-background, 2%);
+    }  
+    > a {
+      line-height: 6rem;
+      @include breakpoint(small) {
+        line-height: 2rem
+      }
+    }
+  }
+}
+
+.top-bar {
+  .project-link, .article-link {
+    background-color: transparent;
+    // position: absolute;
+    top: 0;
+  }
+  .contact-link {
+    // @extend .has-form;
+    .contact {
+      @extend .button;
+      font-size: 0.8125rem;
+      background-color: $color-branding;
+      @include border-top-radius(3px);
+      @include border-bottom-radius(3px);      
+      color: darken($color-background, 7%);
+      border: 2px darken($color-background, 7%) solid;
+      &:hover, &:focus {
+        background-color: $color-branding;
+        color: $color-background;
+        border: 2px $color-background solid;
+      }
+    }
+  }
+}

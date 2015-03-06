@@ -9,3 +9,59 @@
 hr.section {
 	margin: 2rem 0rem 1rem 0rem;
 }
+
+// Projects
+
+.project {
+  &-list {
+    &-item {      
+      &-title {      
+        @extend .small-12, .columns;
+      }
+      &-description {        
+        @extend .small-12, .columns;
+      }
+      &-tags {
+        li {
+        }
+      }
+      &-links {
+        @extend .small-12, .columns;
+      }
+    }
+  }
+}
+
+
+// Landing Screen
+
+.landing-screen {
+  &-horizon {
+    @include horizon();
+  }
+  &-title-container {    
+    @include breakpoint (large) {
+      @include dead-center(800px, 480px);  
+    }
+    @include breakpoint (medium) {
+      @include dead-center(590px, 224px);  
+    }
+    @include breakpoint (small) {
+      @include dead-center(320px, 184px);  
+    }
+    @extend .small-12, .columns;
+    text-align: center;    
+  }
+}
+
+// footer
+
+footer {
+  .social, .colophon {
+    @extend .alpha, .beta;
+    @extend .small-12, .columns; 
+    &-list-item {
+      @extend .small-12, .medium-3, .columns;
+    }
+  }
+}

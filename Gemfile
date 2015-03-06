@@ -7,6 +7,8 @@ gem "middleman"
 # Live-reloading plugin
 gem "middleman-livereload"
 
+gem "middleman-blog"
+
 # For faster file watcher updates on Windows:
 gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw]
 
@@ -14,3 +16,6 @@ gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw]
 platforms :mri_18 do
   gem "ruby18_source_location"
 end
+
+gem "middleman-google-analytics"
+gem 'middleman-deploy', '~> 1.0'

@@ -1,0 +1,48 @@
+{
+  "projects":[
+  {
+    "title": "Octave Journal",
+    "slug": "octavejournal",
+    "description": "Multilingual publishing platform",
+    "tags": [
+      "rails",
+      "sass",
+      "js"
+    ],
+    "url": "http://octavejournal.com/"
+  },
+  {
+    "title": "Quester",
+    "slug": "quester",
+    "description": "Webapp marketing page",
+    "tags": [
+      "middleman",
+      "sass",
+      "js"
+    ],
+    "url": "http://quester.nyc/"
+  },
+  {
+    "title": "Great Green Sources",
+    "slug": "greatgreensources",
+    "description": "Website",
+    "tags": [
+      "AngularJs",
+      "LinemanJs",
+      "Sass"
+    ],
+    "url": "http://greatgreensources.com/"
+  },
+  {
+    "title": "Beach or Nah",
+    "slug": "beachornah",
+    "description": "Single service app",
+    "tags": [
+      "AngularJs",
+      "Middleman",
+      "Sass"
+    ],
+    "url": "http://beachornah.herokuapp.com/"
+  }
+  ]
+}

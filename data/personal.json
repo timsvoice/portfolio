@@ -1,0 +1,20 @@
+{
+  "social": [
+    {
+      "site": "GitHub",
+      "url": "http://www.github.com/timsvoice"
+    },
+    {
+      "site": "Stack Overflow",
+      "url": "http://stackoverflow.com/users/2076687/timsvoice"
+    },
+    {
+      "site": "Twitter",
+      "url": "http://twitter.com/timsvoice"
+    },
+    {
+      "site": "Email",
+      "url": "mailto:timsethvoice@gmail.com"
+    }
+  ]
+}

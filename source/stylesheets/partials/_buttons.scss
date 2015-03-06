@@ -1,0 +1,17 @@
+.contact {
+  @extend .button;
+  text-align: center;  
+  font-size: 0.8125rem;
+  margin-top: 1.5rem;
+  background-color: $color-branding;
+  @include border-top-radius(3px);
+  @include border-bottom-radius(3px);      
+  color: darken($color-background, 7%);
+  border: 2px darken($color-background, 7%) solid;
+  &:hover, &:focus {
+    background-color: $color-branding;
+    color: $color-background;
+    border: 2px $color-background solid;
+    transition: all 0.5s;
+  }
+}

@@ -11,8 +11,10 @@
   </head>
   
   <body class="<%= page_classes %>">
+    
     <%= yield %>
 
     <%= javascript_include_tag  "all" %>
+    <%= google_analytics_universal_tag %>
   </body>
 </html>

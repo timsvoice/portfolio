@@ -6,7 +6,7 @@ hr {
 }
 
 :focus {
-	background:white;
+	// background:white;
 }
 
 .vcard {
@@ -18,4 +18,154 @@ hr {
 
 .hidden {
 	display: none !important;
+}
+
+// Projects
+
+.project {
+  &-background {
+    @include center-background-image;
+    z-index: -2;
+    &-overlay {
+      top: 0;
+      bottom: 0;
+      height: 100%;
+      width: 100%;
+      background-color: transparentize($color-branding, 0.45);
+      position: fixed;
+      z-index: -1;      
+    }
+  }
+  &-list {
+    margin-left: 0;
+    margin-bottom: 0;
+    line-height: 0;
+    &-item {
+      width: 100%;
+      opacity: 0.45;
+      list-style: none;
+      display: inline-block;
+      // height: 17rem;
+      padding-top: 4rem;
+      padding-bottom: 5rem;
+      border-bottom: 0.125rem $color-border solid;
+        &:hover {
+          opacity: .95;
+          border-bottom: 0.125rem transparentize($color-border, 0.3) solid;
+          -webkit-transition: opacity 0.5s;
+          -moz-transition: opacity 0.5s;
+          transition: opacity 0.5s;
+          .project-list-item-tags {
+            opacity: 0.45;
+          }
+        }
+      @include breakpoint (small) {
+        opacity: 0.75;
+        .project-list-item-tags {
+          opacity: 0.45;
+        }
+      }
+      &-title {
+              
+      }
+      &-description {        
+        p {
+          display: inline-block;
+        }
+      }
+      &-tags {
+        display: inline-block;
+        @include breakpoint(small) {
+          display: block;
+        }
+        margin-left: 0;
+        li {
+          display: inline-block;
+          list-style: none;         
+        }
+      }
+      &-links {
+        margin-left: 1rem;
+        margin-top: 0.5rem;
+      }
+    }
+    &-item:last-child {
+      border-bottom: none;      
+    }
+  }
+}
+
+// splash screen
+
+.landing-screen {
+  background-color: $color-branding;
+  height: 800px;
+}
+
+// footer 
+
+.footer-container {
+  background-color: $color-branding;
+}
+
+footer {
+  @extend .clearfix;
+  // @extend .row;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: darken($color-branding, 0%);
+  .social, .colophon {   
+    color: $color-text;
+    &-list {
+      list-style: none;
+      margin-left: 0;
+      &-item {
+        display: inline-block;        
+        text-align: center;
+        a {
+          color: $color-text;
+          font-size: 1.75rem;
+          font-weight: $text-heavy;
+          text-align: center;
+          border-bottom: none;
+          padding-bottom: 1rem;
+          transition: all 0.5s ease;
+          -moz-transition: all 0.5s ease;
+          -webkit-transition: all 0.5s ease;          
+          @include breakpoint(medium) {
+            font-size: 1.25rem;
+          }
+          @include breakpoint(small) {
+            font-size: 1.5rem;
+            line-height: 3rem;
+          }
+          &:hover {
+            padding-bottom: 0.125rem ;
+            border-bottom: 0.25rem darken($color-text, 0%) solid;
+            transition: all 0.5s ease;
+            -webkit-transition: all 0.5s ease;            
+          }          
+        }
+      }
+    }
+    &-title {
+      font-size: 2rem;
+      color: $color-text;
+      font-weight: $text-heavy;
+    }
+    &-body {
+      font-size: 1.5rem;
+      color: $color-text;
+      font-weight: $text-light;
+    }
+  }
+}
+
+.divider {
+  height: 7rem;
+  @include breakpoint(small) {
+    height: 2rem;
+  }
+  background-color: $color-branding;
+  transform: translate3d(0,25px,0) skew(0,2deg) !important;
 }

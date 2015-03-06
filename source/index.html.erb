@@ -1,4 +1,41 @@
 ---
-title: Welcome to Middleman
+title: Timothy Voice | Portfolio
 ---
 
+<div class="landing-screen" id="splash">
+  <div class="landing-screen-horizon">
+    <div class="landing-screen-title-container" id="title-container">
+      <h1 class="landing-screen-title" id="fade">timothy <span>voice</span></h1>
+      <h2 class="landing-screen-sub-title">designer/developer</h2>
+    </div>
+  </div>
+</div>
+
+<div class="project-horizon">
+  <ul class="project-list">
+    <% data.projects.projects.each do |project| %>
+    <li class="project-list-item" id="<%= project.slug %>" onmouseover="changeBackground(this.id)">
+      <h2 class="project-list-item-title">
+        <a href="<%= project.url %>"> <%= project.title %> </a>
+      </h2>
+      <div class="project-list-item-description">
+        <p><%= project.description %></p>
+        <ul class="project-list-item-tags">
+          <% project.tags.each do |tag| %>
+            <li>
+              <p> <%= tag %> </p>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </li>
+    <% end %>
+  </ul>
+</div>
+  
+<div class="project-background-overlay">
+</div>
+<img src="/img/<%= data.projects.projects.first.slug %>.jpeg" class="project-background" id="project-background"></img>
+
+
+<%= partial "footer"%>

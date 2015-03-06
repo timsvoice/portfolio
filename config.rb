@@ -1,4 +1,51 @@
 ###
+# Google Analytics
+###
+
+activate :google_analytics do |ga|
+  ga.tracking_id = 'UA-40277117-1'
+end
+
+###
+# Blog settings
+###
+
+# Time.zone = "UTC"
+
+activate :blog do |blog|
+  # blog.sources = "https://s3-us-west-2.amazonaws.com/timvoice/content/{title}.html"
+  blog.sources = "content/{title}.html"  
+  blog.permalink = "{type}/{title}.html"
+  # Matcher for blog source files
+  # blog.sources = "{year}-{month}-{day}-{title}.html"
+  # blog.taglink = "tags/{tag}.html"
+  blog.layout = "article"
+  blog.summary_separator = /(READMORE)/
+  # blog.summary_length = 250
+  # blog.year_link = "{year}.html"
+  # blog.month_link = "{year}/{month}.html"
+  # blog.day_link = "{year}/{month}/{day}.html"
+  # blog.default_extension = ".markdown"
+
+  blog.tag_template = "tag.html"
+  blog.calendar_template = "calendar.html"
+
+  blog.custom_collections = {
+    type: {
+      link: '{type}.html',
+        template: '/type.html'
+    }
+  }
+
+  # Enable pagination
+  # blog.paginate = true
+  # blog.per_page = 10
+  # blog.page_link = "page/{num}"
+end
+
+page "/feed.xml", layout: false
+
+###
 # Compass
 ###
 
@@ -104,4 +151,16 @@ configure :build do
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
+end
+
+activate :deploy do |deploy|
+  deploy.method = :rsync
+  deploy.host   = "www.timothyvoice.com"
+  deploy.path   = "/var/www/timothyvoice.com/public_html"
+  # Optional Settings
+  deploy.user  = "root" # no default
+  # deploy.port  = 5309 # ssh port, default: 22
+  # deploy.clean = true # remove orphaned files on remote host, default: false
+  # deploy.flags = "-rltgoDvzO --no-p --del" # add custom flags, default: -avz
+  deploy.build_before = true
 end

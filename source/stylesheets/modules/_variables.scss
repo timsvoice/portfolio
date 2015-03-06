@@ -2,14 +2,16 @@
 	Colors
 ============================ */
 
-$gray: hsla(0,0,91%,1);
-$light-gray: hsla(0,0,60%,1);
-$white: hsla(0,0,100%,1);
-$transparent-white: hsla(0,0,100%,0.95);
-$dark-gray: hsla(0,0,53%,1);
-$black: hsla(0,0,0%,1);
-$navy-black: hsla(219,100,13%,1);
-$transparent-black: hsla(0,0,0%,0.75);
+
+$color-base: hsla(0, 0%, 32%, 1.0);
+$color-accent: hsla(197, 78%, 61%, 1.0);
+$color-link: hsla(180, 5%, 48%, 1.0);
+$color-text: hsla(0, 0%, 95%, 1.0);
+$color-background: hsla(220, 100%, 99%, 1.0);
+
+$color-branding: hsla(197, 78%, 3%, 1.0);
+// $color-accent: hsla(0,0,91%,1);
+$color-border: hsla(0, 0%, 100%, 1.0);
 
 /* ============================ 
 	Typography
@@ -18,9 +20,9 @@ $transparent-black: hsla(0,0,0%,0.75);
 $body-font: "pragmatica-web", Helvetica, Arial, sans-serif;
 $text-font: "minion-pro", Times, serif;
 
-$heavy-text:900;
-$medium-text:400;
-$light-text:200;
+$text-heavy:900;
+$text-medium:400;
+$text-light:200;
 
 $underline: 0.0625rem dotted;
 
@@ -28,9 +30,8 @@ $underline: 0.0625rem dotted;
 	Borders
 ============================ */
 
-$border-thick: 0.125rem $black solid;
-$border-thin:  0.125rem $gray solid;
 
 /* ============================ 
 	Backgrounds
 ============================ */
+
